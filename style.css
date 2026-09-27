@@ -1,0 +1,711 @@
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background-color: #111;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+
+    padding: 20px 40px;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.site-name {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+
+        url("images/1.png");
+
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-color: #111;
+
+}
+
+
+.hero-content {
+
+    padding: 20px;
+
+}
+
+
+.hero-location {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.6;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(50px, 8vw, 110px);
+
+    letter-spacing: 8px;
+
+    margin: 0;
+
+}
+
+
+.hero-description {
+
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    opacity: 0.7;
+
+}
+
+
+/* BUSINESS / LOCATION */
+
+.business-location {
+    width: 100%;
+    min-height: 500px;
+
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.business-location-overlay {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 650px;
+
+    margin-top: 65px;
+
+    text-align: center;
+}
+
+.business-location-overlay h2 {
+    margin: 15px 0 10px;
+    font-size: 32px;
+}
+
+.business-location-overlay p {
+    margin: 8px 0;
+}
+
+.location-address {
+    margin-top: 28px !important;
+    line-height: 1.7;
+}
+
+.business-location .location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    padding: 13px 25px;
+
+    border: 1px solid #fff;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1.5px;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.business-location .location-button:hover {
+    background: #fff;
+    color: #111;
+}
+
+@media (max-width: 700px) {
+
+.business-location {
+    min-height: 650px;
+
+    background-size: 100% auto;
+    background-position: center 50%;
+}
+
+    .business-location-overlay {
+        margin-top: 45px;
+    }
+
+    .business-location-overlay h2 {
+        font-size: 27px;
+    }
+}
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 60px;
+}
+.gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.gallery-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.gallery-controls button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.gallery-controls button:hover {
+    background: #fff;
+    color: #111;
+}
+
+#gallery-counter {
+    min-width: 60px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+
+    .gallery-track {
+        gap: 0;
+    }
+
+    .gallery-item {
+        flex: 0 0 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+}
+/* =========================================
+   LOCATION
+========================================= */
+
+.location {
+
+    padding: 140px 20px;
+
+    text-align: center;
+
+}
+
+
+.location-content {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+
+.location h2 {
+
+    font-size:
+        clamp(32px, 5vw, 60px);
+
+    font-weight: 400;
+
+    margin: 25px 0;
+
+}
+
+
+.location p {
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+
+}
+
+
+.location-button,
+.instagram-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 30px;
+
+    padding: 14px 22px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid #444;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition:
+
+        background 0.3s ease,
+
+        color 0.3s ease,
+
+        border-color 0.3s ease;
+
+}
+
+
+.location-button:hover,
+.instagram-button:hover {
+
+    background: white;
+
+    color: #111;
+
+    border-color: white;
+
+}
+
+
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+.instagram {
+
+    padding:
+        120px 20px 180px;
+
+    text-align: center;
+
+}
+
+
+.instagram-content {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+}
+
+
+.instagram h2 {
+
+    font-size:
+        clamp(32px, 5vw, 60px);
+
+    font-weight: 400;
+
+    margin: 25px 0;
+
+}
+
+
+.instagram p {
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================
+   FLOATING MENU
+========================================= */
+
+.floating-menu {
+
+    position: fixed;
+
+    left: 24px;
+
+    bottom: 24px;
+
+    z-index: 1000;
+
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+
+    padding: 13px 18px;
+
+
+    color: white;
+
+    text-decoration: none;
+
+
+    background:
+        rgba(17, 17, 17, 0.85);
+
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.35);
+
+
+    backdrop-filter:
+        blur(8px);
+
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+
+    transition:
+
+        background 0.3s ease,
+
+        color 0.3s ease,
+
+        border-color 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+.floating-menu::after {
+
+    content: "→";
+
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.floating-menu:hover {
+
+    background: white;
+
+    color: #111;
+
+    border-color: white;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.floating-menu:hover::after {
+
+    transform:
+        translateX(4px);
+
+}
+
+/* INSTAGRAM */
+
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25px;
+    padding: 13px 25px;
+
+    border: 1px solid #fff;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1.5px;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.instagram-button:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .gallery-section {
+        padding-top: 45px;
+    }
+
+    .gallery-item {
+        flex: 0 0 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .gallery-controls {
+        margin-top: 20px;
+    }
+
+}
+/* =========================================
+   MENU PAGE
+========================================= */
+
+.menu-page {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 0 140px;
+}
+
+
+/* CATEGORY */
+
+.menu-category {
+    margin-bottom: 100px;
+}
+
+.menu-category h1 {
+    margin: 0 0 45px;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+
+/* MENU ITEMS */
+
+.menu-items {
+    width: 100%;
+}
+
+
+/* ITEM */
+
+.menu-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* NAMES */
+
+.menu-name {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    line-height: 1.4;
+}
+
+.menu-name span:nth-child(1) {
+    font-size: 17px;
+}
+
+.menu-name span:nth-child(2) {
+    font-size: 13px;
+    opacity: 0.55;
+}
+
+.menu-name span:nth-child(3) {
+    font-size: 13px;
+    opacity: 0.55;
+}
+
+
+/* PRICE */
+
+.menu-price {
+    font-size: 15px;
+    margin-left: 30px;
+
+    /* TEMPORARILY HIDDEN
+       Prices remain in the HTML
+       and can be shown later. */
+
+    display: none;
+}
+
+
+/* BACK BUTTON */
+
+.menu-page + .floating-menu {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .menu-page {
+        width: 88%;
+        padding: 70px 0 120px;
+    }
+
+    .menu-category {
+        margin-bottom: 75px;
+    }
+
+    .menu-category h1 {
+        margin-bottom: 30px;
+
+        font-size: 22px;
+        letter-spacing: 4px;
+    }
+
+    .menu-item {
+        padding: 17px 0;
+    }
+
+    .menu-name span:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .menu-name span:nth-child(2),
+    .menu-name span:nth-child(3) {
+        font-size: 12px;
+    }
+
+}
